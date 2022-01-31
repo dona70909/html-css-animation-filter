@@ -1,0 +1,79 @@
+/* !Rosso Graduale */
+.ex-1-square:hover{
+    background-color: red;
+    transition: background 3s;
+
+}
+
+
+/* !from square to a rectangle */
+.ex-2-square:active{
+    width: 100%;
+    transition: all 3s;
+}
+
+.ex-3-square:hover{
+    border-radius: 50%;
+    animation: circle ease-in 5s ;
+}
+
+@keyframes circle{
+
+    25% {
+        border-radius: 25%;
+    }
+
+} 
+
+/* square background color change */
+
+.ex-4-square:hover{
+    background-color: #f5f5f5;
+    transition: background 3s ease-out;
+}
+
+/* scale */
+.ex-5-square:hover{
+    transform: scale(1.8);
+    transition: all 3s;
+}
+
+/* img black&white */
+.ex-6-img:hover{
+    filter: grayscale(1);
+}
+
+/* TWO EFFECTS */
+.ex-7-img:hover{
+    opacity: 0.9;
+    filter: sepia(0.7);
+    transition: all 3s ease-in;
+}
+
+/* border radius + filters */
+.ex-8-img:hover{
+    border-radius: 5%;
+    filter: saturate(0.5) sepia(0.5);
+    transition:all 3s ease-in;
+}
+
+/* effects + border */
+.ex-9-img:hover{
+    border-radius: 5%;
+    filter: sepia(0.5) contrast(0.8);
+    transform: scale(1.5);
+    transition: all 3s ease-in;
+}
+
+.ex-10-icon{
+   
+    animation: spinningAround 1s linear infinite;
+}
+
+@keyframes spinningAround{
+
+    100%{
+        transform: rotate(360deg);
+    }
+   
+}
