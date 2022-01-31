@@ -86,7 +86,7 @@
 
 
 .ex-12-button:hover .ex-12-bottom-white{
-    animation: animateRight 1s linear alternate;
+    animation: animateRight 3s linear alternate;
 }
 
 @keyframes animateLeft{
