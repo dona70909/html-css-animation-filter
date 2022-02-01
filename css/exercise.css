@@ -19,7 +19,7 @@
 
 @keyframes circle{
 
-    25% {
+    100%{
         border-radius: 25%;
     }
 
@@ -34,7 +34,11 @@
 
 /* scale */
 .ex-5-square:hover{
-    transform: scale(1.8);
+    transform: scale(2);
+    transition: all 3s;
+}
+.ex-5-square:active{
+    transform: scale(.5);
     transition: all 3s;
 }
 
@@ -76,120 +80,120 @@
 }
 
 .ex-11-icon:hover{
-    animation: spinningAround 3s infinite alternate-reverse;
+    animation: spinningAroundTwo 3s infinite alternate-reverse;
   /*   animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
+@keyframes spinningAroundTwo{
+    0%{
+        transform: rotate(290deg);
+    }
 
+    100%{
+        transform: rotate(0deg);
+    }
+}
 .ex-12-button:hover .ex-12-top-white{
-    animation: animateLeft 1s linear alternate;
+    /* left: 60%; */
+    animation: animateLeft 10s linear;
 }
 
 
 .ex-12-button:hover .ex-12-bottom-white{
-    animation: animateRight 3s linear alternate;
+    animation: animateRight 10s linear;
 }
 
 @keyframes animateLeft{
-
     0% {
-        left: calc(50% / 3);
+        left: 10%;
     }
-
     50% {
-        left:calc(50% / 3);
+        left: calc(100% - 60px);
     }
-
-    100%{
-        left:calc(50% / 3);
+    100% {
+        left: 10%;
     }
 }
 
 @keyframes animateRight{
 
     0% {
-        right:calc(50% / 3);
+        right: 20%;
     }
-
-    50%{
-        right:calc(50% / 3);
+    50% {
+        right: calc(100% - 60px);
     }
-
     100% {
-        right:calc(50% / 3);
+        right: 20%;
     }
 }
 
+
 .ex-13-button:hover .ex-13-top-white{
-    animation: animateLeft 4s linear;
+    animation:movingTop 30s linear ;
 }
 
 
 .ex-13-button:hover .ex-13-bottom-white{
-    animation: animateRight 4s linear ;
+    animation: movingBottom 30s linear;
 }
 
-@keyframes animateLeft{
-    0%{
-        left:100%;
-        right:0;
-        top:0
+
+
+@keyframes movingTop{
+    
+    0% {
+        top: -10px;
+        left: 10%;
+    }
+    30% {
+        left: calc(100% - 30px);
+        top: -10px;
     }
 
-    25%{
-        right:0;
-        top:0;
-        bottom:100%;
+    /* Angolo scende */
+    45% {
+        left: calc(100% - 30px);
+        top: 100%;
+    }
+    75% {
+        left: 0;
+        top: 100%;
+    }
+    90% {
+        left: -15px;
+        top: -10px;
     }
 
-    50%{
-        left:0;
-        bottom:0;
-        right: 100%;
+    100% {
+        left: 10%;
+        top: -10px;
     }
+}
 
-    75%{
-        bottom:100%;
-        top:0;
-        left:0;
+@keyframes movingBottom {
+    
+    0% {
+        bottom: -10px;
+        right: 20%;
     }
-
-    100%{
+    30% {
+        right: calc(100% - 30px);
+        bottom: -10px;
+    }
+    45% {
+        right: calc(100% - 30px);
         bottom: 100%;
-        left:5%;
-        top:0;
     }
-    
-}
-
-@keyframes animateRight{
-    0%{
-        left:0;
-        right:100%;
-        top:0
-    }
-
-    25%{
-        right:0;
-        top:100%;
-        bottom:0;
-    }
-
-    50%{
-        left:100%;
-        bottom:0;
+    75% {
         right: 0;
+        bottom: 100%;
     }
-
-    75%{
-        bottom:0;
-        top:100%;
-        left:0;
+    90% {
+        right: -15px;
+        bottom: -10px;
     }
-
-    100%{
-        bottom:0;
-        left:5%;
-        top:100%;
+    100% {
+        bottom: -10px;
+        right: 20%;
     }
-    
 }
