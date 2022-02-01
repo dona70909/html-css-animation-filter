@@ -14,16 +14,8 @@
 
 .ex-3-square:hover{
     border-radius: 50%;
-    animation: circle ease-in 5s ;
+    transition: all ease-in 5s ;
 }
-
-@keyframes circle{
-
-    100%{
-        border-radius: 25%;
-    }
-
-} 
 
 /* square background color change */
 
